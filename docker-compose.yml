@@ -1,0 +1,12 @@
+```yaml name=docker-compose.yml
+version: '3.9'
+
+services:
+  bot:
+    build: .
+    restart: always
+    env_file:
+      - .env
+    volumes:
+      - ./data/db.sqlite:/app/data/db.sqlite
+```
